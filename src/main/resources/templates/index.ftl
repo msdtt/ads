@@ -38,7 +38,7 @@
             <a href="#" class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
-                    Ace Admin
+                    广告管理系统
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->
@@ -52,7 +52,7 @@
                              alt="Jason's Photo"/>
 								<span class="user-info">
 									<small>Welcome,</small>
-									Jason
+									admin
 								</span>
 
                         <i class="icon-caret-down"></i>
