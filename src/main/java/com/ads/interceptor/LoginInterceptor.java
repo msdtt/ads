@@ -33,7 +33,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 		if (clazz.isAnnotationPresent(Auth.class) ||
 				method.isAnnotationPresent(Auth.class)) {
 
-			if(request.getAttribute(Constants.USER_CODE_SESSION_KEY) == null){
+			if(request.getSession().getAttribute(Constants.USER_NAME_KEY) == null){
 
 				response.sendRedirect(request.getContextPath()+"/login");
 				return false;

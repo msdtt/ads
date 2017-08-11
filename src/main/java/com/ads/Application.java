@@ -30,11 +30,4 @@ public class Application extends WebMvcConfigurerAdapter {
         return "redirect:index";
     }
 
-    @RequestMapping("/index")
-    @Auth
-    ModelAndView index() {
-        ModelAndView result = new ModelAndView("/index");
-
-        return result;
-    }
 }

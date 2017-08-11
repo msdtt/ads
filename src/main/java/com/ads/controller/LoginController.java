@@ -32,20 +32,19 @@ public class LoginController{
 	}
 
 	@RequestMapping("/login")
-	ModelAndView login(HttpServletRequest request,
+	boolean login(HttpServletRequest request,
 	                   HttpServletResponse response, String userName, String password) throws Exception{
 
 		ModelAndView result = null;
 		boolean isVaild = operLogic.verifyPassword(userName, password);
 		if(isVaild){
-			request.setAttribute(Constants.USER_NAME_KEY, userName + System.currentTimeMillis());
-			result = new ModelAndView("/index");
+			request.getSession().setAttribute(Constants.USER_NAME_KEY, userName + System.currentTimeMillis());
+			response.sendRedirect(request.getContextPath()+"/index");
+			return true;
 		}else{
 			throw new Exception("登入失败");
 		}
 
-
-		return result;
 	}
 
 }
