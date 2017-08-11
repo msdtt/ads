@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ads.mapper.AdsMapper" >
+  <resultMap id="BaseResultMap" type="com.ads.model.Ads" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="ads_name" property="adsName" jdbcType="VARCHAR" />
+    <result column="ads_type" property="adsType" jdbcType="VARCHAR" />
+    <result column="announce_no" property="announceNo" jdbcType="INTEGER" />
+    <result column="click_no" property="clickNo" jdbcType="INTEGER" />
+    <result column="position" property="position" jdbcType="VARCHAR" />
+    <result column="show_rate" property="showRate" jdbcType="DECIMAL" />
+    <result column="validate_time" property="validateTime" jdbcType="BIGINT" />
+    <result column="statuse" property="statuse" jdbcType="VARCHAR" />
+    <result column="needs_origin" property="needsOrigin" jdbcType="VARCHAR" />
+    <result column="feedback_score" property="feedbackScore" jdbcType="INTEGER" />
+    <result column="note" property="note" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    id, ads_name, ads_type, announce_no, click_no, position, show_rate, validate_time, 
+    statuse, needs_origin, feedback_score, note
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ads.model.AdsCriteria" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ads
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <if test="limit != 0 " >
+       limit ${start} , ${limit}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    select 
+    <include refid="Base_Column_List" />
+    from ads
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="lockByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    select 
+    <include refid="Base_Column_List" />
+    from ads
+    where id = #{id,jdbcType=INTEGER} for update 
+  </select>
+  <select id="lockByExample" resultMap="BaseResultMap" parameterType="com.ads.model.AdsCriteria" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    select
+    <include refid="Base_Column_List" />
+    from ads
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+     for update 
+  </select>
+  <select id="lastInsertId" resultType="java.lang.Long" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+      select case lastId when 0 then 'can not get last insert id' else lastId end as lastId from ( select  LAST_INSERT_ID() lastId ) s1  
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    delete from ads
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ads.model.AdsCriteria" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    delete from ads
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ads.model.Ads" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    insert into ads (id, ads_name, ads_type, 
+      announce_no, click_no, position, 
+      show_rate, validate_time, statuse, 
+      needs_origin, feedback_score, note
+      )
+    values (#{id,jdbcType=INTEGER}, #{adsName,jdbcType=VARCHAR}, #{adsType,jdbcType=VARCHAR}, 
+      #{announceNo,jdbcType=INTEGER}, #{clickNo,jdbcType=INTEGER}, #{position,jdbcType=VARCHAR}, 
+      #{showRate,jdbcType=DECIMAL}, #{validateTime,jdbcType=BIGINT}, #{statuse,jdbcType=VARCHAR}, 
+      #{needsOrigin,jdbcType=VARCHAR}, #{feedbackScore,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ads.model.Ads" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    insert into ads
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="adsName != null" >
+        ads_name,
+      </if>
+      <if test="adsType != null" >
+        ads_type,
+      </if>
+      <if test="announceNo != null" >
+        announce_no,
+      </if>
+      <if test="clickNo != null" >
+        click_no,
+      </if>
+      <if test="position != null" >
+        position,
+      </if>
+      <if test="showRate != null" >
+        show_rate,
+      </if>
+      <if test="validateTime != null" >
+        validate_time,
+      </if>
+      <if test="statuse != null" >
+        statuse,
+      </if>
+      <if test="needsOrigin != null" >
+        needs_origin,
+      </if>
+      <if test="feedbackScore != null" >
+        feedback_score,
+      </if>
+      <if test="note != null" >
+        note,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="adsName != null" >
+        #{adsName,jdbcType=VARCHAR},
+      </if>
+      <if test="adsType != null" >
+        #{adsType,jdbcType=VARCHAR},
+      </if>
+      <if test="announceNo != null" >
+        #{announceNo,jdbcType=INTEGER},
+      </if>
+      <if test="clickNo != null" >
+        #{clickNo,jdbcType=INTEGER},
+      </if>
+      <if test="position != null" >
+        #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="showRate != null" >
+        #{showRate,jdbcType=DECIMAL},
+      </if>
+      <if test="validateTime != null" >
+        #{validateTime,jdbcType=BIGINT},
+      </if>
+      <if test="statuse != null" >
+        #{statuse,jdbcType=VARCHAR},
+      </if>
+      <if test="needsOrigin != null" >
+        #{needsOrigin,jdbcType=VARCHAR},
+      </if>
+      <if test="feedbackScore != null" >
+        #{feedbackScore,jdbcType=INTEGER},
+      </if>
+      <if test="note != null" >
+        #{note,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ads.model.AdsCriteria" resultType="java.lang.Integer" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    select count(*) from ads
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    update ads
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.adsName != null" >
+        ads_name = #{record.adsName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.adsType != null" >
+        ads_type = #{record.adsType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.announceNo != null" >
+        announce_no = #{record.announceNo,jdbcType=INTEGER},
+      </if>
+      <if test="record.clickNo != null" >
+        click_no = #{record.clickNo,jdbcType=INTEGER},
+      </if>
+      <if test="record.position != null" >
+        position = #{record.position,jdbcType=VARCHAR},
+      </if>
+      <if test="record.showRate != null" >
+        show_rate = #{record.showRate,jdbcType=DECIMAL},
+      </if>
+      <if test="record.validateTime != null" >
+        validate_time = #{record.validateTime,jdbcType=BIGINT},
+      </if>
+      <if test="record.statuse != null" >
+        statuse = #{record.statuse,jdbcType=VARCHAR},
+      </if>
+      <if test="record.needsOrigin != null" >
+        needs_origin = #{record.needsOrigin,jdbcType=VARCHAR},
+      </if>
+      <if test="record.feedbackScore != null" >
+        feedback_score = #{record.feedbackScore,jdbcType=INTEGER},
+      </if>
+      <if test="record.note != null" >
+        note = #{record.note,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    update ads
+    set id = #{record.id,jdbcType=INTEGER},
+      ads_name = #{record.adsName,jdbcType=VARCHAR},
+      ads_type = #{record.adsType,jdbcType=VARCHAR},
+      announce_no = #{record.announceNo,jdbcType=INTEGER},
+      click_no = #{record.clickNo,jdbcType=INTEGER},
+      position = #{record.position,jdbcType=VARCHAR},
+      show_rate = #{record.showRate,jdbcType=DECIMAL},
+      validate_time = #{record.validateTime,jdbcType=BIGINT},
+      statuse = #{record.statuse,jdbcType=VARCHAR},
+      needs_origin = #{record.needsOrigin,jdbcType=VARCHAR},
+      feedback_score = #{record.feedbackScore,jdbcType=INTEGER},
+      note = #{record.note,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ads.model.Ads" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    update ads
+    <set >
+      <if test="adsName != null" >
+        ads_name = #{adsName,jdbcType=VARCHAR},
+      </if>
+      <if test="adsType != null" >
+        ads_type = #{adsType,jdbcType=VARCHAR},
+      </if>
+      <if test="announceNo != null" >
+        announce_no = #{announceNo,jdbcType=INTEGER},
+      </if>
+      <if test="clickNo != null" >
+        click_no = #{clickNo,jdbcType=INTEGER},
+      </if>
+      <if test="position != null" >
+        position = #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="showRate != null" >
+        show_rate = #{showRate,jdbcType=DECIMAL},
+      </if>
+      <if test="validateTime != null" >
+        validate_time = #{validateTime,jdbcType=BIGINT},
+      </if>
+      <if test="statuse != null" >
+        statuse = #{statuse,jdbcType=VARCHAR},
+      </if>
+      <if test="needsOrigin != null" >
+        needs_origin = #{needsOrigin,jdbcType=VARCHAR},
+      </if>
+      <if test="feedbackScore != null" >
+        feedback_score = #{feedbackScore,jdbcType=INTEGER},
+      </if>
+      <if test="note != null" >
+        note = #{note,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ads.model.Ads" >
+    <!--
+     WARNING -  该映射文件为自动生成, 请勿修改.
+      This element was generated on Sat Aug 12 02:01:22 CST 2017.
+    -->
+    update ads
+    set ads_name = #{adsName,jdbcType=VARCHAR},
+      ads_type = #{adsType,jdbcType=VARCHAR},
+      announce_no = #{announceNo,jdbcType=INTEGER},
+      click_no = #{clickNo,jdbcType=INTEGER},
+      position = #{position,jdbcType=VARCHAR},
+      show_rate = #{showRate,jdbcType=DECIMAL},
+      validate_time = #{validateTime,jdbcType=BIGINT},
+      statuse = #{statuse,jdbcType=VARCHAR},
+      needs_origin = #{needsOrigin,jdbcType=VARCHAR},
+      feedback_score = #{feedbackScore,jdbcType=INTEGER},
+      note = #{note,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
