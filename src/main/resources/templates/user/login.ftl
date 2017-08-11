@@ -43,7 +43,7 @@ $('#login-button').click(function (event) {
 </script>
 
 <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';color:#000000">
-<h1>数据管理系统</h1>
+<h1>广告管理系统</h1>
 </div>
 </body>
 </html>
