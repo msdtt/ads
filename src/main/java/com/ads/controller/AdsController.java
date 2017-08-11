@@ -33,6 +33,13 @@ public class AdsController{
 		return result;
 	}
 
+	@RequestMapping("/pushAdsHome")
+	ModelAndView pushAdsHome() {
+		ModelAndView result = new ModelAndView("/ads/pushAds");
+
+		return result;
+	}
+
 	@RequestMapping("/list")
 	@ResponseBody
 	PageBase list(AdsQry qry) {

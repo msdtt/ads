@@ -137,15 +137,12 @@
 
 
     <script type="text/javascript" language="javascript">
-        function iFrameHeight() {
-            document.getElementById('ifrID').src="xxx.xxx";
-        }
 
         $("#allAds").click(function(){
             document.getElementById('iframepage').src="${request.contextPath}/ads";
         });
         $("#pushAds").click(function(){
-            document.getElementById('iframepage').src="www.baidu.com";
+            document.getElementById('iframepage').src="${request.contextPath}/pushAdsHome";
         });
     </script>
     <script src="${request.contextPath}/static/js/bootstrap.min.js"></script>
