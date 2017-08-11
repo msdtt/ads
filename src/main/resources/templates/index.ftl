@@ -96,15 +96,15 @@
 
                     <ul class="submenu">
                         <li>
-                            <a href="form-elements.html">
-                                <i class="icon-double-angle-right" id="allAds"></i>
+                            <a id="allAds"">
+                                <i class="icon-double-angle-right"></i>
                                 所有广告
                             </a>
                         </li>
 
                         <li>
-                            <a href="form-wizard.html">
-                                <i class="icon-double-angle-right" id="pushAds"></i>
+                            <a id="pushAds">
+                                <i class="icon-double-angle-right" ></i>
                                 发布广告
                             </a>
                         </li>
