@@ -13,8 +13,8 @@
 			<h1>Welcome</h1>
 
 			<form class="form" id="login" action="${request.contextPath}/login/login">
-				<input type="text" placeholder="Username">
-				<input type="password" placeholder="Password">
+				<input type="text" placeholder="Username" name="userName">
+				<input type="password" placeholder="Password" name="password">
 				<button type="submit" id="login-button">Login</button>
 			</form>
 		</div>
