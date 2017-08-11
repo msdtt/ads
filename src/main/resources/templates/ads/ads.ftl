@@ -34,9 +34,6 @@
                     <input type="text" id="adsName" name="adsName" value="" />
                     <button class="btn btn-sm btn-purple" id="query_button" onclick="return false;query();" >查询</button>
 
-                    <button class="close" data-dismiss="alert">
-                        <i class="icon-remove"></i>
-                    </button>
                 </div>
             </form>
             <table id="grid-table"></table>
