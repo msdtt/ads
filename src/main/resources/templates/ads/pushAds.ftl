@@ -1,26 +1,55 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
     <title>AITSupport</title>
 
+    <!-- basic styles -->
+
     <link href="${request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="${request.contextPath}/static/css/font-awesome.min.css"/>
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="${request.contextPath}/static/css/font-awesome-ie7.min.css"/>
+    <![endif]-->
 
     <!-- page specific plugin styles -->
 
     <link rel="stylesheet" href="${request.contextPath}/static/css/select2.css"/>
 
+    <!-- fonts -->
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300"/>
+
+    <!-- ace styles -->
 
     <link rel="stylesheet" href="${request.contextPath}/static/css/ace.min.css"/>
     <link rel="stylesheet" href="${request.contextPath}/static/css/ace-rtl.min.css"/>
     <link rel="stylesheet" href="${request.contextPath}/static/css/ace-skins.min.css"/>
 
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="${request.contextPath}/static/css/ace-ie.min.css"/>
+    <![endif]-->
+
+    <!-- inline styles related to this page -->
+
+    <!-- ace settings handler -->
+
     <script src="${request.contextPath}/static/js/ace-extra.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+    <script src="${request.contextPath}/static/js/html5shiv.js"></script>
+    <script src="${request.contextPath}/static/js/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
 
+
 <div class="page-content">
+
     <div class="page-content">
         <div class="page-header">
             <h1>
@@ -48,7 +77,6 @@
                         <div class="widget-box">
                             <div class="widget-header widget-header-blue widget-header-flat">
                                 <h4 class="lighter">New Ad</h4>
-
                                 <div class="widget-toolbar">
                                     <label>
                                         <small class="green">
@@ -78,7 +106,7 @@
 
                                             <li data-target="#step3">
                                                 <span class="step">3</span>
-                                                <span class="title">Detailed Information具体内容</span>
+                                                <span class="title">Detailed Advertisement具体内容</span>
                                             </li>
 
                                             <li data-target="#step4">
@@ -90,14 +118,18 @@
                                                 <span class="step">5</span>
                                                 <span class="title">Verify the rList确认推荐客户列表</span>
                                             </li>
+
+                                            <li data-target="#step6">
+                                                <span class="step">6</span>
+                                                <span class="title">Completed完成</span>
+                                            </li>
                                         </ul>
                                     </div>
 
                                     <hr/>
                                     <div class="step-content row-fluid position-relative" id="step-container">
                                         <div class="step-pane active" id="step1">
-                                            <h3 class="lighter block green">Enter the following information</h3>
-
+                                            <h3 class="lighter block green">Enter the Basic information</h3>
                                             <form class="form-horizontal" id="sample-form">
                                                 <div class="form-group has-warning">
                                                     <label for="inputWarning"
@@ -105,11 +137,11 @@
                                                         with warning</label>
 
                                                     <div class="col-xs-12 col-sm-5">
-																		<span class="block input-icon input-icon-right">
-																			<input type="text" id="inputWarning"
+                                                                        <span class="block input-icon input-icon-right">
+                                                                            <input type="text" id="inputWarning"
                                                                                    class="width-100"/>
-																			<i class="icon-leaf"></i>
-																		</span>
+                                                                            <i class="icon-leaf"></i>
+                                                                        </span>
                                                     </div>
                                                     <div class="help-block col-xs-12 col-sm-reset inline">
                                                         Warning tip help!
@@ -122,14 +154,14 @@
                                                         with error</label>
 
                                                     <div class="col-xs-12 col-sm-5">
-																		<span class="block input-icon input-icon-right">
-																			<input type="text" id="inputError"
+                                                                        <span class="block input-icon input-icon-right">
+                                                                            <input type="text" id="inputError"
                                                                                    class="width-100"/>
-																			<i class="icon-remove-sign"></i>
-																		</span>
+                                                                            <i class="icon-remove-sign"></i>
+                                                                        </span>
                                                     </div>
-                                                    <div class="help-block col-xs-12 col-sm-reset inline"> Error tip
-                                                        help!
+                                                    <div class="help-block col-xs-12 col-sm-reset inline"> Error
+                                                        tip help!
                                                     </div>
                                                 </div>
 
@@ -139,11 +171,11 @@
                                                         with success</label>
 
                                                     <div class="col-xs-12 col-sm-5">
-																		<span class="block input-icon input-icon-right">
-																			<input type="text" id="inputSuccess"
+                                                                        <span class="block input-icon input-icon-right">
+                                                                            <input type="text" id="inputSuccess"
                                                                                    class="width-100"/>
-																			<i class="icon-ok-sign"></i>
-																		</span>
+                                                                            <i class="icon-ok-sign"></i>
+                                                                        </span>
                                                     </div>
                                                     <div class="help-block col-xs-12 col-sm-reset inline">
                                                         Success tip help!
@@ -156,14 +188,14 @@
                                                         with info</label>
 
                                                     <div class="col-xs-12 col-sm-5">
-																		<span class="block input-icon input-icon-right">
-																			<input type="text" id="inputInfo"
+                                                                        <span class="block input-icon input-icon-right">
+                                                                            <input type="text" id="inputInfo"
                                                                                    class="width-100"/>
-																			<i class="icon-info-sign"></i>
-																		</span>
+                                                                            <i class="icon-info-sign"></i>
+                                                                        </span>
                                                     </div>
-                                                    <div class="help-block col-xs-12 col-sm-reset inline"> Info tip
-                                                        help!
+                                                    <div class="help-block col-xs-12 col-sm-reset inline"> Info
+                                                        tip help!
                                                     </div>
                                                 </div>
 
@@ -173,64 +205,24 @@
                                                         with error</label>
 
                                                     <div class="col-xs-12 col-sm-5">
-																		<span class="input-icon block">
-																			<input type="text" id="inputError2"
+                                                                        <span class="input-icon block">
+                                                                            <input type="text" id="inputError2"
                                                                                    class="width-100"/>
-																			<i class="icon-remove-sign red"></i>
-																		</span>
+                                                                            <i class="icon-remove-sign red"></i>
+                                                                        </span>
                                                     </div>
-                                                    <div class="help-block col-xs-12 col-sm-reset inline"> Error tip
-                                                        help!
+                                                    <div class="help-block col-xs-12 col-sm-reset inline"> Error
+                                                        tip help!
                                                     </div>
                                                 </div>
                                             </form>
 
-                                            <form class="form-horizontal hide" id="validation-form" method="get">
-                                                <div class="form-group">
-                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                                           for="email">Email Address:</label>
-
-                                                    <div class="col-xs-12 col-sm-9">
-                                                        <div class="clearfix">
-                                                            <input type="email" name="email" id="email"
-                                                                   class="col-xs-12 col-sm-6"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="space-2"></div>
+                                            <form class="form-horizontal hide" id="validation-form"
+                                                  method="get">
 
                                                 <div class="form-group">
                                                     <label class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                                           for="password">Password:</label>
-
-                                                    <div class="col-xs-12 col-sm-9">
-                                                        <div class="clearfix">
-                                                            <input type="password" name="password" id="password"
-                                                                   class="col-xs-12 col-sm-4"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="space-2"></div>
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                                           for="password2">Confirm Password:</label>
-
-                                                    <div class="col-xs-12 col-sm-9">
-                                                        <div class="clearfix">
-                                                            <input type="password" name="password2" id="password2"
-                                                                   class="col-xs-12 col-sm-4"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="hr hr-dotted"></div>
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                                           for="name">Company Name:</label>
+                                                           for="name">Ad Title:</label>
 
                                                     <div class="col-xs-12 col-sm-9">
                                                         <div class="clearfix">
@@ -244,161 +236,45 @@
 
                                                 <div class="form-group">
                                                     <label class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                                           for="phone">Phone Number:</label>
-
-                                                    <div class="col-xs-12 col-sm-9">
-                                                        <div class="input-group">
-																			<span class="input-group-addon">
-																				<i class="icon-phone"></i>
-																			</span>
-
-                                                            <input type="tel" id="phone" name="phone"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="space-2"></div>
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                                           for="url">Company URL:</label>
-
-                                                    <div class="col-xs-12 col-sm-9">
-                                                        <div class="clearfix">
-                                                            <input type="url" id="url" name="url"
-                                                                   class="col-xs-12 col-sm-8"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="hr hr-dotted"></div>
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right">Subscribe
-                                                        to</label>
-
-                                                    <div class="col-xs-12 col-sm-9">
-                                                        <div>
-                                                            <label>
-                                                                <input name="subscription" value="1" type="checkbox"
-                                                                       class="ace"/>
-                                                                <span class="lbl"> Latest news and announcements</span>
-                                                            </label>
-                                                        </div>
-
-                                                        <div>
-                                                            <label>
-                                                                <input name="subscription" value="2" type="checkbox"
-                                                                       class="ace"/>
-                                                                <span class="lbl"> Product offers and discounts</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="space-2"></div>
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right">Gender</label>
-
-                                                    <div class="col-xs-12 col-sm-9">
-                                                        <div>
-                                                            <label class="blue">
-                                                                <input name="gender" value="1" type="radio"
-                                                                       class="ace"/>
-                                                                <span class="lbl"> Male</span>
-                                                            </label>
-                                                        </div>
-
-                                                        <div>
-                                                            <label class="blue">
-                                                                <input name="gender" value="2" type="radio"
-                                                                       class="ace"/>
-                                                                <span class="lbl"> Female</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="hr hr-dotted"></div>
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                                           for="state">State</label>
+                                                           for="state">Ad Type</label>
 
                                                     <div class="col-xs-12 col-sm-9">
                                                         <select id="state" name="state" class="select2"
                                                                 data-placeholder="Click to Choose...">
-                                                            <option value="">&nbsp;</option>
-                                                            <option value="AL">Alabama</option>
-                                                            <option value="AK">Alaska</option>
-                                                            <option value="AZ">Arizona</option>
-                                                            <option value="AR">Arkansas</option>
-                                                            <option value="CA">California</option>
-                                                            <option value="CO">Colorado</option>
-                                                            <option value="CT">Connecticut</option>
-                                                            <option value="DE">Delaware</option>
-                                                            <option value="FL">Florida</option>
-                                                            <option value="GA">Georgia</option>
-                                                            <option value="HI">Hawaii</option>
-                                                            <option value="ID">Idaho</option>
-                                                            <option value="IL">Illinois</option>
-                                                            <option value="IN">Indiana</option>
-                                                            <option value="IA">Iowa</option>
-                                                            <option value="KS">Kansas</option>
-                                                            <option value="KY">Kentucky</option>
-                                                            <option value="LA">Louisiana</option>
-                                                            <option value="ME">Maine</option>
-                                                            <option value="MD">Maryland</option>
-                                                            <option value="MA">Massachusetts</option>
-                                                            <option value="MI">Michigan</option>
-                                                            <option value="MN">Minnesota</option>
-                                                            <option value="MS">Mississippi</option>
-                                                            <option value="MO">Missouri</option>
-                                                            <option value="MT">Montana</option>
-                                                            <option value="NE">Nebraska</option>
-                                                            <option value="NV">Nevada</option>
-                                                            <option value="NH">New Hampshire</option>
-                                                            <option value="NJ">New Jersey</option>
-                                                            <option value="NM">New Mexico</option>
-                                                            <option value="NY">New York</option>
-                                                            <option value="NC">North Carolina</option>
-                                                            <option value="ND">North Dakota</option>
-                                                            <option value="OH">Ohio</option>
-                                                            <option value="OK">Oklahoma</option>
-                                                            <option value="OR">Oregon</option>
-                                                            <option value="PA">Pennsylvania</option>
-                                                            <option value="RI">Rhode Island</option>
-                                                            <option value="SC">South Carolina</option>
-                                                            <option value="SD">South Dakota</option>
-                                                            <option value="TN">Tennessee</option>
-                                                            <option value="TX">Texas</option>
-                                                            <option value="UT">Utah</option>
-                                                            <option value="VT">Vermont</option>
-                                                            <option value="VA">Virginia</option>
-                                                            <option value="WA">Washington</option>
-                                                            <option value="WV">West Virginia</option>
-                                                            <option value="WI">Wisconsin</option>
-                                                            <option value="WY">Wyoming</option>
+                                                            <option value="VA">type1</option>
+                                                            <option value="WA">type2</option>
+                                                            <option value="WV">type3</option>
+                                                            <option value="WI">type4</option>
+                                                            <option value="WY">type5</option>
+                                                            <option value="VA">type6</option>
+                                                            <option value="WA">type7</option>
+                                                            <option value="WV">type8</option>
+                                                            <option value="WI">type9</option>
+                                                            <option value="WY">type10</option>
                                                         </select>
                                                     </div>
                                                 </div>
 
                                                 <div class="space-2"></div>
 
+
+                                                <div class="hr hr-dotted"></div>
+
+
+                                                <div class="space-2"></div>
+
                                                 <div class="form-group">
                                                     <label class="control-label col-xs-12 col-sm-3 no-padding-right"
-                                                           for="platform">Platform</label>
+                                                           for="platform">Valid Time</label>
 
                                                     <div class="col-xs-12 col-sm-9">
                                                         <div class="clearfix">
-                                                            <select class="input-medium" id="platform" name="platform">
+                                                            <select class="input-medium" id="platform"
+                                                                    name="platform">
                                                                 <option value="">------------------</option>
-                                                                <option value="linux">Linux</option>
-                                                                <option value="windows">Windows</option>
-                                                                <option value="mac">Mac OS</option>
-                                                                <option value="ios">iOS</option>
-                                                                <option value="android">Android</option>
+                                                                <option value="linux">1 WEEK</option>
+                                                                <option value="windows">2 WEEKS</option>
+                                                                <option value="mac">3 Days</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -412,8 +288,8 @@
 
                                                     <div class="col-xs-12 col-sm-9">
                                                         <div class="clearfix">
-                                                            <textarea class="input-xlarge" name="comment"
-                                                                      id="comment"></textarea>
+                                                                    <textarea class="input-xlarge" name="comment"
+                                                                              id="comment"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -423,8 +299,9 @@
                                                 <div class="form-group">
                                                     <div class="col-xs-12 col-sm-4 col-sm-offset-3">
                                                         <label>
-                                                            <input name="agree" id="agree" type="checkbox" class="ace"/>
-                                                            <span class="lbl"> I accept the policy</span>
+                                                            <input name="agree" id="agree" type="checkbox"
+                                                                   class="ace"/>
+                                                            <span class="lbl"> Verified </span>
                                                         </label>
                                                     </div>
                                                 </div>
@@ -432,6 +309,57 @@
                                         </div>
 
                                         <div class="step-pane" id="step2">
+                                            <div class="col-sm-6">
+                                                <h3 class="header blue lighter smaller">
+                                                    <i class="icon-list-alt smaller-90"></i>
+                                                    Suggest Templates
+                                                </h3>
+                                                <a href="#" id="id-btn-dialog1" class="btn btn-info btn-sm">Email</a>
+                                                <a href="#" id="id-btn-dialog2"
+                                                   class="btn btn-purple btn-sm">Messages</a>
+                                                <a href="#" id="id-btn-dialog3" class="btn btn-info btn-sm">WeChat</a>
+
+                                                <div id="dialog-message" class="hide">
+                                                    <p>
+                                                        WE Recommandate you this template because...
+                                                    </p>
+
+                                                    <div class="hr hr-12 hr-double"></div>
+
+                                                    <p>
+                                                        WE Recommandate you this template because it earn
+                                                        <b>36% more feedback</b>
+                                                        .
+                                                    </p>
+                                                </div><!-- #dialog-message -->
+                                                <div id="dialog-message1" class="hide">
+                                                    <p>
+                                                        WE Recommandate you this template because...
+                                                    </p>
+
+                                                    <div class="hr hr-12 hr-double"></div>
+
+                                                    <p>
+                                                        WE Recommandate you this template because it earn
+                                                        <b>36% more feedback</b>
+                                                        .
+                                                    </p>
+                                                </div><!-- #dialog-message1 -->
+                                                <div id="dialog-confirm" class="hide">
+                                                    <div class="alert alert-info bigger-110">
+                                                        These items will be permanently deleted and cannot be
+                                                        recovered.
+                                                    </div>
+
+                                                    <div class="space-6"></div>
+
+                                                    <p class="bigger-110 bolder center grey">
+                                                        <i class="icon-hand-right blue bigger-120"></i>
+                                                        Are you sure?
+                                                    </p>
+                                                </div><!-- #dialog-confirm -->
+                                            </div><!-- ./span -->
+
                                             <div class="row-fluid">
                                                 <div class="alert alert-success">
                                                     <button type="button" class="close" data-dismiss="alert">
@@ -443,41 +371,7 @@
                                                         Well done!
                                                     </strong>
 
-                                                    You successfully read this important alert message.
-                                                    <br/>
-                                                </div>
-
-                                                <div class="alert alert-danger">
-                                                    <button type="button" class="close" data-dismiss="alert">
-                                                        <i class="icon-remove"></i>
-                                                    </button>
-
-                                                    <strong>
-                                                        <i class="icon-remove"></i>
-                                                        Oh snap!
-                                                    </strong>
-
-                                                    Change a few things up and try submitting again.
-                                                    <br/>
-                                                </div>
-
-                                                <div class="alert alert-warning">
-                                                    <button type="button" class="close" data-dismiss="alert">
-                                                        <i class="icon-remove"></i>
-                                                    </button>
-                                                    <strong>Warning!</strong>
-
-                                                    Best check yo self, you're not looking too good.
-                                                    <br/>
-                                                </div>
-
-                                                <div class="alert alert-info">
-                                                    <button type="button" class="close" data-dismiss="alert">
-                                                        <i class="icon-remove"></i>
-                                                    </button>
-                                                    <strong>Heads up!</strong>
-
-                                                    This alert needs your attention, but it's not super important.
+                                                    The system has successfully give out its recommandation!
                                                     <br/>
                                                 </div>
                                             </div>
@@ -488,11 +382,22 @@
                                                 <h3 class="blue lighter">This is step 3</h3>
                                             </div>
                                         </div>
-
                                         <div class="step-pane" id="step4">
                                             <div class="center">
+                                                <h3 class="blue lighter">This is step 4</h3>
+                                            </div>
+                                        </div>
+                                        <div class="step-pane" id="step5">
+                                            <div class="center">
+                                                <h3 class="blue lighter">This is step 4</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="step-pane" id="step6">
+                                            <div class="center">
                                                 <h3 class="green">Congrats!</h3>
-                                                Your product is ready to ship! Click finish to continue!
+                                                Your advertisement is ready to publish! Click finish to
+                                                continue!
                                             </div>
                                         </div>
                                     </div>
@@ -522,22 +427,31 @@
                                 <ul class="wizard-steps">
                                     <li data-target="#modal-step1" class="active">
                                         <span class="step">1</span>
-                                        <span class="title">Validation states</span>
+                                        <span class="title">Basic Information</span>
                                     </li>
 
                                     <li data-target="#modal-step2">
                                         <span class="step">2</span>
-                                        <span class="title">Alerts</span>
+                                        <span class="title">Suggest the TEMPLATE</span>
                                     </li>
 
                                     <li data-target="#modal-step3">
                                         <span class="step">3</span>
-                                        <span class="title">Payment Info</span>
+                                        <span class="title">Detailed Advertisement</span>
                                     </li>
 
                                     <li data-target="#modal-step4">
                                         <span class="step">4</span>
-                                        <span class="title">Other Info</span>
+                                        <span class="title">Verify the Ad Label</span>
+                                    </li>
+
+                                    <li data-target="#modal-step5">
+                                        <span class="step">5</span>
+                                        <span class="title">Verify the rList</span>
+                                    </li>
+                                    <li data-target="#modal-step6">
+                                        <span class="step">6</span>
+                                        <span class="title">Completed</span>
                                     </li>
                                 </ul>
                             </div>
@@ -566,6 +480,18 @@
                                         <h4 class="blue">Step 4</h4>
                                     </div>
                                 </div>
+                                <div class="step-pane" id="modal-step5">
+                                    <div class="center">
+                                        <h4 class="blue">Step 5</h4>
+                                    </div>
+                                </div>
+                                <div class="step-pane" id="modal-step6">
+                                    <div class="center">
+                                        <h4 class="blue">Step 6</h4>
+                                    </div>
+                                </div>
+
+
                             </div>
 
                             <div class="modal-footer wizard-actions">
@@ -592,9 +518,17 @@
     </div><!-- /.page-content -->
 </div><!-- /.main-content -->
 
+<!-- basic scripts -->
+
+
+<!--[if !IE]> -->
+
 <script type="text/javascript">
     window.jQuery || document.write("<script src='${request.contextPath}/static/js/jquery-2.0.3.min.js'>" + "<" + "/script>");
 </script>
+
+<!-- <![endif]-->
+
 
 <script type="text/javascript">
     if ("ontouchend" in document) document.write("<script src='${request.contextPath}/static/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
@@ -764,8 +698,115 @@
             invalidHandler: function (form) {
             }
         });
+        $("#datepicker").datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: false,
+            //isRTL:true,
+
+        });
 
 
+        //override dialog's title function to allow for HTML titles
+        $.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
+            _title: function (title) {
+                var $title = this.options.title || '&nbsp;'
+                if (("title_html" in this.options) && this.options.title_html == true)
+                    title.html($title);
+                else title.text($title);
+            }
+        }));
+
+        $("#id-btn-dialog1").on('click', function (e) {
+            e.preventDefault();
+
+            var dialog = $("#dialog-message").removeClass('hide').dialog({
+                modal: true,
+                title: "<div class='widget-header widget-header-small'><h4 class='smaller'><i class='icon-ok'></i> jQuery UI Dialog</h4></div>",
+                title_html: true,
+                buttons: [
+                    {
+                        text: "Cancel",
+                        "class": "btn btn-xs",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    },
+                    {
+                        text: "OK",
+                        "class": "btn btn-primary btn-xs",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                ]
+            });
+
+            /**
+             dialog.data( "uiDialog" )._title = function(title) {
+                        title.html( this.options.title );
+                    };
+             **/
+        });
+
+
+        $("#id-btn-dialog2").on('click', function (e) {
+            e.preventDefault();
+
+            $("#dialog-confirm").removeClass('hide').dialog({
+                resizable: false,
+                modal: true,
+                title: "<div class='widget-header'><h4 class='smaller'><i class='icon-warning-sign red'></i> Empty the recycle bin?</h4></div>",
+                title_html: true,
+                buttons: [
+                    {
+                        html: "<i class='icon-trash bigger-110'></i>&nbsp; Delete all items",
+                        "class": "btn btn-danger btn-xs",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                    ,
+                    {
+                        html: "<i class='icon-remove bigger-110'></i>&nbsp; Cancel",
+                        "class": "btn btn-xs",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                ]
+            });
+        });
+        $("#id-btn-dialog3").on('click', function (e) {
+            e.preventDefault();
+
+            var dialog = $("#dialog-message1").removeClass('hide').dialog({
+                modal: true,
+                title: "<div class='widget-header widget-header-small'><h4 class='smaller'><i class='icon-ok'></i> jQuery UI Dialog</h4></div>",
+                title_html: true,
+                buttons: [
+                    {
+                        text: "Cancel",
+                        "class": "btn btn-xs",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    },
+                    {
+                        text: "OK",
+                        "class": "btn btn-primary btn-xs",
+                        click: function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                ]
+            });
+
+            /**
+             dialog.data( "uiDialog" )._title = function(title) {
+                        title.html( this.options.title );
+                    };
+             **/
+        });
         $('#modal-wizard .modal-header').ace_wizard();
         $('#modal-wizard .wizard-actions .btn[data-dismiss=modal]').removeAttr('disabled');
     })
