@@ -2,19 +2,13 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8"/>
-    <title>广告管理页面</title>
+    <title>Advertisement Management</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- basic styles -->
 
     <link href="${request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="${request.contextPath}/static/css/font-awesome.min.css"/>
-
-    <!--[if IE 7]>
-    <link rel="stylesheet" href="${request.contextPath}/static/css/font-awesome-ie7.min.css"/>
-    <![endif]-->
-
-    <!-- page specific plugin styles -->
 
     <link rel="stylesheet" href="${request.contextPath}/static/css/ace.min.css"/>
     <link rel="stylesheet" href="${request.contextPath}/static/css/ace-rtl.min.css"/>
@@ -38,7 +32,7 @@
             <a href="#" class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
-                    广告管理系统
+                    Advertisement Management System
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->
@@ -52,7 +46,7 @@
                              alt="Jason's Photo"/>
 								<span class="user-info">
 									<small>Welcome,</small>
-									admin
+									Maggic
 								</span>
 
                         <i class="icon-caret-down"></i>
@@ -89,8 +83,7 @@
                 <li>
                     <a href="#" class="dropdown-toggle">
                         <i class="icon-edit"></i>
-                        <i class="icon-edit"></i>
-                        <span class="menu-text"> 广告管理 </span>
+                        <span class="menu-text"> Advertisement Management </span>
 
                         <b class="arrow icon-angle-down"></b>
                     </a>
@@ -98,15 +91,15 @@
                     <ul class="submenu">
                         <li>
                             <a id="allAds"">
-                                <i class="icon-double-angle-right"></i>
-                                所有广告
+                            <i class="icon-double-angle-right"></i>
+                            All advertisements
                             </a>
                         </li>
 
                         <li>
                             <a id="pushAds">
                                 <i class="icon-double-angle-right" ></i>
-                                发布广告
+                                Accurate Advertising
                             </a>
                         </li>
 
@@ -128,14 +121,12 @@
         </div>
 
         <div class="main-content" id="mainContent" style="min-height: 612px;">
-            <iframe src="${request.contextPath}/ads" id="iframepage"width="100%" style="min-height: 612px;"></iframe>
+            <iframe src="${request.contextPath}/user/index" id="iframepage"width="100%" style="min-height: 612px;"></iframe>
         </div>
     </div><!-- /.main-container -->
     <script type="text/javascript">
         window.jQuery || document.write("<script src='${request.contextPath}/static/js/jquery-2.0.3.min.js'>" + "<" + "/script>");
     </script>
-
-
 
     <script type="text/javascript" language="javascript">
 

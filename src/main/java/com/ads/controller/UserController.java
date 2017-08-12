@@ -17,11 +17,19 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController{
 
-	@RequestMapping
 	@Auth
+	@RequestMapping
 	ModelAndView home() {
 
 		ModelAndView result = new ModelAndView("/user/login");
+
+		return result;
+	}
+
+	@Auth
+	@RequestMapping("/index")
+	ModelAndView index() {
+		ModelAndView result = new ModelAndView("/user/index");
 
 		return result;
 	}
