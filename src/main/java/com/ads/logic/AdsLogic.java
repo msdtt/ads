@@ -32,7 +32,7 @@ public class AdsLogic{
 		criteria.setLimit(qry.getRows());
 		criteria.setStart((qry.getPage()-1)*qry.getRows());
 		Integer count = adsMapper.countByExample(criteria);
-		List<Ads> adsList = new ArrayList<>();
+		List<Ads> adsList = new ArrayList<Ads>();
 		if(count > 0 ){
 			adsList = adsMapper.selectByExample(criteria);
 		}
