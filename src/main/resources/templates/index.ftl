@@ -134,7 +134,7 @@
             document.getElementById('iframepage').src="${request.contextPath}/ads";
         });
         $("#pushAds").click(function(){
-            document.getElementById('iframepage').src="${request.contextPath}/pushAdsHome";
+            document.getElementById('iframepage').src="${request.contextPath}/ads/pushAdsHome";
         });
     </script>
     <script src="${request.contextPath}/static/js/bootstrap.min.js"></script>
