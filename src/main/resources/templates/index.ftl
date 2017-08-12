@@ -89,6 +89,7 @@
                 <li>
                     <a href="#" class="dropdown-toggle">
                         <i class="icon-edit"></i>
+                        <i class="icon-edit"></i>
                         <span class="menu-text"> 广告管理 </span>
 
                         <b class="arrow icon-angle-down"></b>
