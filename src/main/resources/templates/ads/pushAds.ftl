@@ -391,7 +391,7 @@
                                                                 <tr>
                                                                     <th class="center">
                                                                         <label>
-                                                                            <input type="checkbox" class="ace" />
+                                                                            <input type="checkbox"id="table111" class="ace" />
                                                                             <span class="lbl"></span>
                                                                         </label>
                                                                     </th>
@@ -813,7 +813,8 @@
 <script src="${request.contextPath}/static/js/typeahead-bs2.min.js"></script>
 
 <!-- page specific plugin scripts -->
-
+<script src="${request.contextPath}/static/js/jquery.dataTables.min.js"></script>
+<script src="${request.contextPath}/static//js/jquery.dataTables.bootstrap.js"></script>
 <script src="${request.contextPath}/static/js/fuelux/fuelux.wizard.min.js"></script>
 <script src="${request.contextPath}/static/js/jquery.validate.min.js"></script>
 <script src="${request.contextPath}/static/js/additional-methods.min.js"></script>
@@ -1077,6 +1078,39 @@
         });
         $('#modal-wizard .modal-header').ace_wizard();
         $('#modal-wizard .wizard-actions .btn[data-dismiss=modal]').removeAttr('disabled');
+			var oTable1 = $('#sample-table-2').dataTable( {
+				"aoColumns": [
+			      { "bSortable": false },
+			      null, null,null, null, null,
+				  { "bSortable": false }
+				] } );
+				
+				
+				$('table th input:checkbox').on('click' , function(){
+					var that = this;
+					$(this).closest('table').find('tr > td:first-child input:checkbox')
+					.each(function(){
+						this.checked = that.checked;
+						$(this).closest('tr').toggleClass('selected');
+					});
+						
+				});
+			
+			
+				$('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+				function tooltip_placement(context, source) {
+					var $source = $(source);
+					var $parent = $source.closest('table')
+					var off1 = $parent.offset();
+					var w1 = $parent.width();
+			
+					var off2 = $source.offset();
+					var w2 = $source.width();
+			
+					if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+					return 'left';
+				}
+
     })
 </script>
 </body>
