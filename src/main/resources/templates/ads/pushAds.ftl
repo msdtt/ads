@@ -568,11 +568,7 @@
                                             <div class="center">
                                                 <div class="row">
                                                     <div class="col-xs-12">
-                                                        <h3 class="header smaller lighter blue">jQuery dataTables</h3>
-                                                        <div class="table-header">
-                                                            Results for "Latest Registered Domains"
-                                                        </div>
-
+                                                       
                                                         <div class="table-responsive">
                                                             <table id="sample-table-2" class="table table-striped table-bordered table-hover">
                                                                 <thead>
