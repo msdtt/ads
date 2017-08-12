@@ -29,7 +29,7 @@
 
     <div class="navbar-container" id="navbar-container">
         <div class="navbar-header pull-left">
-            <a href="#" class="navbar-brand">
+            <a href="${request.contextPath}/index" class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
                     Advertisement Management System

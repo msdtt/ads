@@ -1,22 +1,22 @@
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- basic styles -->
 
-    <link href="${request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="${request.contextPath}/static/css/font-awesome.min.css" />
+    <link href="${request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="${request.contextPath}/static/css/font-awesome.min.css"/>
 
     <!-- page specific plugin styles -->
 
-    <link rel="stylesheet" href="${request.contextPath}/static/css/jquery-ui-1.10.3.full.min.css" />
-    <link rel="stylesheet" href="${request.contextPath}/static/css/datepicker.css" />
-    <link rel="stylesheet" href="${request.contextPath}/static/css/ui.jqgrid.css" />
+    <link rel="stylesheet" href="${request.contextPath}/static/css/jquery-ui-1.10.3.full.min.css"/>
+    <link rel="stylesheet" href="${request.contextPath}/static/css/datepicker.css"/>
+    <link rel="stylesheet" href="${request.contextPath}/static/css/ui.jqgrid.css"/>
 
-    <link rel="stylesheet" href="${request.contextPath}/static/css/ace.min.css" />
-    <link rel="stylesheet" href="${request.contextPath}/static/css/ace-rtl.min.css" />
-    <link rel="stylesheet" href="${request.contextPath}/static/css/ace-skins.min.css" />
+    <link rel="stylesheet" href="${request.contextPath}/static/css/ace.min.css"/>
+    <link rel="stylesheet" href="${request.contextPath}/static/css/ace-rtl.min.css"/>
+    <link rel="stylesheet" href="${request.contextPath}/static/css/ace-skins.min.css"/>
 
     <script src="${request.contextPath}/static/js/ace-extra.min.js"></script>
 
@@ -38,7 +38,8 @@
         <div class="nav-search" id="nav-search">
             <form class="form-search">
 								<span class="input-icon">
-									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<input type="text" placeholder="Search ..." class="nav-search-input"
+                                           id="nav-search-input" autocomplete="off"/>
 									<i class="icon-search nav-search-icon"></i>
 								</span>
             </form>
@@ -223,24 +224,25 @@
                                         <div id="task-tab" class="tab-pane active">
                                             <h4 class="smaller lighter green">
                                                 <i class="icon-list"></i>
-                                                To do list
+                                                <a id="todoList">To do list</a>
                                             </h4>
 
                                             <ul id="tasks" class="item-list">
                                                 <li class="item-orange clearfix">
                                                     <label class="inline">
-                                                        <input type="checkbox" class="ace" />
+                                                        <input type="checkbox" class="ace"/>
                                                         <span class="lbl">团体优惠Group Discount(Operation manager)</span>
                                                     </label>
 
-                                                    <div class="pull-right easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="42">
+                                                    <div class="pull-right easy-pie-chart percentage" data-size="30"
+                                                         data-color="#ECCB71" data-percent="42">
                                                         <span class="percent">42</span>%
                                                     </div>
                                                 </li>
 
                                                 <li class="item-red clearfix">
                                                     <label class="inline">
-                                                        <input type="checkbox" class="ace" />
+                                                        <input type="checkbox" class="ace"/>
                                                         <span class="lbl"> 巴黎一日游Paris Day Trip(Sales Manager)</span>
                                                     </label>
 
@@ -265,7 +267,7 @@
 
                                                 <li class="item-default clearfix">
                                                     <label class="inline">
-                                                        <input type="checkbox" class="ace" />
+                                                        <input type="checkbox" class="ace"/>
                                                         <span class="lbl">门票打包PASS pakage(Product Manager)</span>
                                                     </label>
 
@@ -276,7 +278,8 @@
 
                                                         <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-caret dropdown-close pull-right">
                                                             <li>
-                                                                <a href="#" class="tooltip-success" data-rel="tooltip" title="Mark&nbsp;as&nbsp;done">
+                                                                <a href="#" class="tooltip-success" data-rel="tooltip"
+                                                                   title="Mark&nbsp;as&nbsp;done">
 																					<span class="green">
 																						<i class="icon-ok bigger-110"></i>
 																					</span>
@@ -284,7 +287,8 @@
                                                             </li>
 
                                                             <li>
-                                                                <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                                <a href="#" class="tooltip-error" data-rel="tooltip"
+                                                                   title="Delete">
 																					<span class="red">
 																						<i class="icon-trash bigger-110"></i>
 																					</span>
@@ -296,7 +300,7 @@
 
                                                 <li class="item-blue clearfix">
                                                     <label class="inline">
-                                                        <input type="checkbox" class="ace" />
+                                                        <input type="checkbox" class="ace"/>
                                                         <span class="lbl">Regular Ads</span>
                                                     </label>
                                                 </li>
@@ -307,7 +311,8 @@
                                             <div class="clearfix">
                                                 <div class="itemdiv memberdiv">
                                                     <div class="user">
-                                                        <img alt="Bob Doe's avatar" src="${request.contextPath}/static/avatars/user.jpg" />
+                                                        <img alt="Bob Doe's avatar"
+                                                             src="${request.contextPath}/static/avatars/user.jpg"/>
                                                     </div>
 
                                                     <div class="body">
@@ -324,13 +329,15 @@
                                                             <span class="label label-warning label-sm">pending</span>
 
                                                             <div class="inline position-relative">
-                                                                <button class="btn btn-minier bigger btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown">
+                                                                <button class="btn btn-minier bigger btn-yellow btn-no-border dropdown-toggle"
+                                                                        data-toggle="dropdown">
                                                                     <i class="icon-angle-down icon-only bigger-120"></i>
                                                                 </button>
 
                                                                 <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
                                                                     <li>
-                                                                        <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+                                                                        <a href="#" class="tooltip-success"
+                                                                           data-rel="tooltip" title="Approve">
 																							<span class="green">
 																								<i class="icon-ok bigger-110"></i>
 																							</span>
@@ -338,7 +345,8 @@
                                                                     </li>
 
                                                                     <li>
-                                                                        <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+                                                                        <a href="#" class="tooltip-warning"
+                                                                           data-rel="tooltip" title="Reject">
 																							<span class="orange">
 																								<i class="icon-remove bigger-110"></i>
 																							</span>
@@ -346,7 +354,8 @@
                                                                     </li>
 
                                                                     <li>
-                                                                        <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                                        <a href="#" class="tooltip-error"
+                                                                           data-rel="tooltip" title="Delete">
 																							<span class="red">
 																								<i class="icon-trash bigger-110"></i>
 																							</span>
@@ -360,7 +369,8 @@
 
                                                 <div class="itemdiv memberdiv">
                                                     <div class="user">
-                                                        <img alt="Joe Doe's avatar" src="${request.contextPath}/static/avatars/avatar2.png" />
+                                                        <img alt="Joe Doe's avatar"
+                                                             src="${request.contextPath}/static/avatars/avatar2.png"/>
                                                     </div>
 
                                                     <div class="body">
@@ -377,13 +387,15 @@
                                                             <span class="label label-warning label-sm">pending</span>
 
                                                             <div class="inline position-relative">
-                                                                <button class="btn btn-minier bigger btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown">
+                                                                <button class="btn btn-minier bigger btn-yellow btn-no-border dropdown-toggle"
+                                                                        data-toggle="dropdown">
                                                                     <i class="icon-angle-down icon-only bigger-120"></i>
                                                                 </button>
 
                                                                 <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
                                                                     <li>
-                                                                        <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+                                                                        <a href="#" class="tooltip-success"
+                                                                           data-rel="tooltip" title="Approve">
 																							<span class="green">
 																								<i class="icon-ok bigger-110"></i>
 																							</span>
@@ -391,7 +403,8 @@
                                                                     </li>
 
                                                                     <li>
-                                                                        <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+                                                                        <a href="#" class="tooltip-warning"
+                                                                           data-rel="tooltip" title="Reject">
 																							<span class="orange">
 																								<i class="icon-remove bigger-110"></i>
 																							</span>
@@ -399,7 +412,8 @@
                                                                     </li>
 
                                                                     <li>
-                                                                        <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                                        <a href="#" class="tooltip-error"
+                                                                           data-rel="tooltip" title="Delete">
 																							<span class="red">
 																								<i class="icon-trash bigger-110"></i>
 																							</span>
@@ -413,7 +427,8 @@
 
                                                 <div class="itemdiv memberdiv">
                                                     <div class="user">
-                                                        <img alt="Jim Doe's avatar" src="${request.contextPath}/static/avatars/avatar.png" />
+                                                        <img alt="Jim Doe's avatar"
+                                                             src="${request.contextPath}/static/avatars/avatar.png"/>
                                                     </div>
 
                                                     <div class="body">
@@ -430,13 +445,15 @@
                                                             <span class="label label-warning label-sm">pending</span>
 
                                                             <div class="inline position-relative">
-                                                                <button class="btn btn-minier bigger btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown">
+                                                                <button class="btn btn-minier bigger btn-yellow btn-no-border dropdown-toggle"
+                                                                        data-toggle="dropdown">
                                                                     <i class="icon-angle-down icon-only bigger-120"></i>
                                                                 </button>
 
                                                                 <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
                                                                     <li>
-                                                                        <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+                                                                        <a href="#" class="tooltip-success"
+                                                                           data-rel="tooltip" title="Approve">
 																							<span class="green">
 																								<i class="icon-ok bigger-110"></i>
 																							</span>
@@ -444,7 +461,8 @@
                                                                     </li>
 
                                                                     <li>
-                                                                        <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+                                                                        <a href="#" class="tooltip-warning"
+                                                                           data-rel="tooltip" title="Reject">
 																							<span class="orange">
 																								<i class="icon-remove bigger-110"></i>
 																							</span>
@@ -452,7 +470,8 @@
                                                                     </li>
 
                                                                     <li>
-                                                                        <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                                        <a href="#" class="tooltip-error"
+                                                                           data-rel="tooltip" title="Delete">
 																							<span class="red">
 																								<i class="icon-trash bigger-110"></i>
 																							</span>
@@ -466,7 +485,8 @@
 
                                                 <div class="itemdiv memberdiv">
                                                     <div class="user">
-                                                        <img alt="Alex Doe's avatar" src="${request.contextPath}/static/avatars/avatar5.png" />
+                                                        <img alt="Alex Doe's avatar"
+                                                             src="${request.contextPath}/static/avatars/avatar5.png"/>
                                                     </div>
 
                                                     <div class="body">
@@ -487,7 +507,8 @@
 
                                                 <div class="itemdiv memberdiv">
                                                     <div class="user">
-                                                        <img alt="Bob Doe's avatar" src="${request.contextPath}/static/avatars/avatar2.png" />
+                                                        <img alt="Bob Doe's avatar"
+                                                             src="${request.contextPath}/static/avatars/avatar2.png"/>
                                                     </div>
 
                                                     <div class="body">
@@ -508,7 +529,8 @@
 
                                                 <div class="itemdiv memberdiv">
                                                     <div class="user">
-                                                        <img alt="Susan's avatar" src="${request.contextPath}/static/avatars/avatar3.png" />
+                                                        <img alt="Susan's avatar"
+                                                             src="${request.contextPath}/static/avatars/avatar3.png"/>
                                                     </div>
 
                                                     <div class="body">
@@ -529,7 +551,8 @@
 
                                                 <div class="itemdiv memberdiv">
                                                     <div class="user">
-                                                        <img alt="Phil Doe's avatar" src="${request.contextPath}/static/avatars/avatar4.png" />
+                                                        <img alt="Phil Doe's avatar"
+                                                             src="${request.contextPath}/static/avatars/avatar4.png"/>
                                                     </div>
 
                                                     <div class="body">
@@ -550,7 +573,8 @@
 
                                                 <div class="itemdiv memberdiv">
                                                     <div class="user">
-                                                        <img alt="Alexa Doe's avatar" src="${request.contextPath}/static/avatars/avatar1.png" />
+                                                        <img alt="Alexa Doe's avatar"
+                                                             src="${request.contextPath}/static/avatars/avatar1.png"/>
                                                     </div>
 
                                                     <div class="body">
@@ -587,7 +611,8 @@
                                             <div class="comments">
                                                 <div class="itemdiv commentdiv">
                                                     <div class="user">
-                                                        <img alt="Bob Doe's Avatar" src="${request.contextPath}/static/avatars/avatar.png" />
+                                                        <img alt="Bob Doe's Avatar"
+                                                             src="${request.contextPath}/static/avatars/avatar.png"/>
                                                     </div>
 
                                                     <div class="body">
@@ -602,19 +627,24 @@
 
                                                         <div class="text">
                                                             <i class="icon-quote-left"></i>
-                                                            it's a special and lovely space, so different from the room or cabin or hotel I have stayed when I (URL HIDDEN) with sunshine,warm and sweet decoration,close to the beach but quite quiet.a little garden but no annoying insect.
+                                                            it's a special and lovely space, so different from the room
+                                                            or cabin or hotel I have stayed when I (URL HIDDEN) with
+                                                            sunshine,warm and sweet decoration,close to the beach but
+                                                            quite quiet.a little garden but no annoying insect.
                                                         </div>
                                                     </div>
 
                                                     <div class="tools">
                                                         <div class="inline position-relative">
-                                                            <button class="btn btn-minier bigger btn-yellow dropdown-toggle" data-toggle="dropdown">
+                                                            <button class="btn btn-minier bigger btn-yellow dropdown-toggle"
+                                                                    data-toggle="dropdown">
                                                                 <i class="icon-angle-down icon-only bigger-120"></i>
                                                             </button>
 
                                                             <ul class="dropdown-menu dropdown-only-icon dropdown-yellow pull-right dropdown-caret dropdown-close">
                                                                 <li>
-                                                                    <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+                                                                    <a href="#" class="tooltip-success"
+                                                                       data-rel="tooltip" title="Approve">
 																						<span class="green">
 																							<i class="icon-ok bigger-110"></i>
 																						</span>
@@ -622,7 +652,8 @@
                                                                 </li>
 
                                                                 <li>
-                                                                    <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+                                                                    <a href="#" class="tooltip-warning"
+                                                                       data-rel="tooltip" title="Reject">
 																						<span class="orange">
 																							<i class="icon-remove bigger-110"></i>
 																						</span>
@@ -630,7 +661,8 @@
                                                                 </li>
 
                                                                 <li>
-                                                                    <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                                    <a href="#" class="tooltip-error" data-rel="tooltip"
+                                                                       title="Delete">
 																						<span class="red">
 																							<i class="icon-trash bigger-110"></i>
 																						</span>
@@ -643,7 +675,8 @@
 
                                                 <div class="itemdiv commentdiv">
                                                     <div class="user">
-                                                        <img alt="Jennifer's Avatar" src="${request.contextPath}/static/avatars/avatar1.png" />
+                                                        <img alt="Jennifer's Avatar"
+                                                             src="${request.contextPath}/static/avatars/avatar1.png"/>
                                                     </div>
 
                                                     <div class="body">
@@ -658,7 +691,8 @@
 
                                                         <div class="text">
                                                             <i class="icon-quote-left"></i>
-                                                            the host is very easy to contact.I will stay here again if I travel to Venice next time.
+                                                            the host is very easy to contact.I will stay here again if I
+                                                            travel to Venice next time.
                                                         </div>
                                                     </div>
 
@@ -677,7 +711,8 @@
 
                                                 <div class="itemdiv commentdiv">
                                                     <div class="user">
-                                                        <img alt="Joe's Avatar" src="${request.contextPath}/static/avatars/avatar2.png" />
+                                                        <img alt="Joe's Avatar"
+                                                             src="${request.contextPath}/static/avatars/avatar2.png"/>
                                                     </div>
 
                                                     <div class="body">
@@ -692,7 +727,8 @@
 
                                                         <div class="text">
                                                             <i class="icon-quote-left"></i>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            Quisque commodo massa sed ipsum porttitor facilisis &hellip;
                                                         </div>
                                                     </div>
 
@@ -711,7 +747,8 @@
 
                                                 <div class="itemdiv commentdiv">
                                                     <div class="user">
-                                                        <img alt="Rita's Avatar" src="${request.contextPath}/static/avatars/avatar3.png" />
+                                                        <img alt="Rita's Avatar"
+                                                             src="${request.contextPath}/static/avatars/avatar3.png"/>
                                                     </div>
 
                                                     <div class="body">
@@ -1007,7 +1044,8 @@
                                     <div class="dialogs">
                                         <div class="itemdiv dialogdiv">
                                             <div class="user">
-                                                <img alt="Alexa's Avatar" src="${request.contextPath}/static/avatars/avatar1.png" />
+                                                <img alt="Alexa's Avatar"
+                                                     src="${request.contextPath}/static/avatars/avatar1.png"/>
                                             </div>
 
                                             <div class="body">
@@ -1031,7 +1069,8 @@
 
                                         <div class="itemdiv dialogdiv">
                                             <div class="user">
-                                                <img alt="John's Avatar" src="${request.contextPath}/static/avatars/avatar.png" />
+                                                <img alt="John's Avatar"
+                                                     src="${request.contextPath}/static/avatars/avatar.png"/>
                                             </div>
 
                                             <div class="body">
@@ -1055,7 +1094,8 @@
 
                                         <div class="itemdiv dialogdiv">
                                             <div class="user">
-                                                <img alt="Bob's Avatar" src="${request.contextPath}/static/avatars/user.jpg" />
+                                                <img alt="Bob's Avatar"
+                                                     src="${request.contextPath}/static/avatars/user.jpg"/>
                                             </div>
 
                                             <div class="body">
@@ -1080,7 +1120,8 @@
 
                                         <div class="itemdiv dialogdiv">
                                             <div class="user">
-                                                <img alt="Jim's Avatar" src="${request.contextPath}/static/avatars/avatar4.png" />
+                                                <img alt="Jim's Avatar"
+                                                     src="${request.contextPath}/static/avatars/avatar4.png"/>
                                             </div>
 
                                             <div class="body">
@@ -1104,7 +1145,8 @@
 
                                         <div class="itemdiv dialogdiv">
                                             <div class="user">
-                                                <img alt="Alexa's Avatar" src="${request.contextPath}/static/avatars/avatar1.png" />
+                                                <img alt="Alexa's Avatar"
+                                                     src="${request.contextPath}/static/avatars/avatar1.png"/>
                                             </div>
 
                                             <div class="body">
@@ -1130,9 +1172,11 @@
                                     <form>
                                         <div class="form-actions">
                                             <div class="input-group">
-                                                <input placeholder="Type your message here ..." type="text" class="form-control" name="message" />
+                                                <input placeholder="Type your message here ..." type="text"
+                                                       class="form-control" name="message"/>
                                                         <span class="input-group-btn">
-																	<button class="btn btn-sm btn-info no-radius" type="button">
+																	<button class="btn btn-sm btn-info no-radius"
+                                                                            type="button">
 																		<i class="icon-share-alt"></i>
 																		发送
 																	</button>
@@ -1149,6 +1193,14 @@
         </div><!-- /.row -->
     </div><!-- /.page-content -->
 </div><!-- /.main-content -->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='${request.contextPath}/static/js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+</script>
+<script type="text/javascript" language="javascript">
 
+    $("#todoList").click(function(){
+        self.location="${request.contextPath}/ads/calendarHome";
+    });
+</script>
 </body>
 </html>

@@ -40,6 +40,13 @@ public class AdsController{
 		return result;
 	}
 
+	@RequestMapping("/calendarHome")
+	ModelAndView calendarHome() {
+		ModelAndView result = new ModelAndView("/ads/calendar");
+
+		return result;
+	}
+
 	@RequestMapping("/list")
 	@ResponseBody
 	PageBase list(AdsQry qry) {
